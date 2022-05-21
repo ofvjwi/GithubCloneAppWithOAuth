@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:contentDescription="@string/txt_home_page"
+        android:icon="@drawable/ic_home_state"
+        android:title="@string/txt_home_page"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/notificationFragment"
+        android:contentDescription="@string/txt_notification_page"
+        android:icon="@drawable/ic_notification_state"
+        android:title="@string/txt_notification_page"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/exploreFragment"
+        android:contentDescription="@string/txt_explore_page"
+        android:icon="@drawable/ic_explore_state"
+        android:title="@string/txt_explore_page"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:contentDescription="@string/txt_profile_page"
+        android:icon="@drawable/ic_profile_state"
+        android:title="@string/txt_profile_page"
+        app:showAsAction="never" />
+
+</menu>
+

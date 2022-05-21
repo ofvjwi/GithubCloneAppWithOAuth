@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:text="@string/txt_today"
+                    android:textAllCaps="false"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:chipBackgroundColor="@color/chip_background_color"
+                    app:chipIcon="@drawable/ic_arrow"
+                    app:chipStrokeColor="@color/for_line"
+                    app:chipStrokeWidth="1dp"
+                    app:iconEndPadding="2dp"
+                    app:iconStartPadding="2dp"
+                    app:textEndPadding="5dp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layoutDirection="rtl"
+                    android:text="@string/txt_language"
+                    android:textAllCaps="false"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:chipBackgroundColor="@color/chip_background_color"
+                    app:chipStrokeColor="@color/for_line"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="8dp"
+                    app:textStartPadding="8dp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layoutDirection="rtl"
+                    android:text="@string/txt_spoken_language"
+                    android:textAllCaps="false"
+                    android:textColor="@color/light_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:chipBackgroundColor="@color/chip_background_color"
+                    app:chipIcon="@drawable/ic_arrow"
+                    app:chipStrokeColor="@color/for_line"
+                    app:chipStrokeWidth="1dp"
+                    app:iconEndPadding="2dp"
+                    app:iconStartPadding="2dp"
+                    app:textEndPadding="5dp" />
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/github_illustration"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

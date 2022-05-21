@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="home_icon_1">#27D561</color>
+    <color name="home_icon_2">#2086FD</color>
+    <color name="home_icon_3">#6F40C9</color>
+    <color name="home_icon_4">#414350</color>
+    <color name="home_icon_5">#FA842E</color>
+    <color name="home_icon_6">#F7C21D</color>
+
+
+    <color name="notification_notification_icon">#E84B5A</color>
+    <color name="texts_color">#777575</color>
+    <color name="bottom_view_item_selected">#0463D6</color>
+    <color name="for_line">#cbcbcb</color>
+    <color name="light_black">#90000000</color>
+    <color name="circle_1">#EEEFF4</color>
+    <color name="circle_2">#EFFEF5</color>
+    <color name="circle_3">#F2F9F8</color>
+    <color name="circle_4">#F3EBFE</color>
+    <color name="circle_5">#FEF7F1</color>
+    <color name="circle_6">#F8EDF2</color>
+    <color name="circle_7">#F2ECF9</color>
+    <color name="circle_8">#EEEFF1</color>
+    <color name="chip_stroke_color">#FFFF00FF</color>
+    <color name="chip_background_color">#F6F5FA</color>
+    <color name="github_illustration">#EEEFF4</color>
+
+</resources>
+

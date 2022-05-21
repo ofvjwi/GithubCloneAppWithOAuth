@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_notification_page"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/txt_inbox"
+                android:textAllCaps="false"
+                android:textColor="@color/light_black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipIcon="@drawable/ic_arrow"
+                app:chipStrokeColor="@color/for_line"
+                app:chipStrokeWidth="1dp"
+                app:iconEndPadding="2dp"
+                app:iconStartPadding="2dp"
+                app:textEndPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layoutDirection="rtl"
+                android:text="@string/txt_unread"
+                android:textAllCaps="false"
+                android:textColor="@color/light_black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipStrokeColor="@color/for_line"
+                app:chipStrokeWidth="1dp"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layoutDirection="rtl"
+                android:text="@string/txt_repository"
+                android:textAllCaps="false"
+                android:textColor="@color/light_black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:chipBackgroundColor="@color/chip_background_color"
+                app:chipIcon="@drawable/ic_arrow"
+                app:chipStrokeColor="@color/for_line"
+                app:chipStrokeWidth="1dp"
+                app:iconEndPadding="2dp"
+                app:iconStartPadding="2dp"
+                app:textEndPadding="5dp" />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="70dp"
+                        android:layout_height="60dp">
+
+                        <LinearLayout
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/view_background_circle"
+                            android:backgroundTint="@color/notification_notification_icon"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@color/notification_notification_icon"
+                                android:backgroundTint="@color/notification_notification_icon"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="bell_notifications.json"
+                                app:lottie_loop="false" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/view_background_shape_chip"
+                            android:gravity="center"
+                            android:rotation="30"
+                            android:text="@string/txt_new"
+                            android:textAllCaps="true"
+                            android:textColor="@color/bottom_view_item_selected"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="@string/txt_customize_your_notification"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="@string/txt_setup_new_push_notifications"
+                        android:textAllCaps="false"
+                        android:textColor="@color/light_black"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/circle_1"
+                        android:text="@string/txt_customize_your_experience"
+                        android:textAllCaps="true"
+                        android:textColor="@color/bottom_view_item_selected"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/txt_later"
+                        android:textAllCaps="true"
+                        android:textColor="@color/bottom_view_item_selected"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/github_illustration"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/im_github_illustration" />
+
+                    <LinearLayout
+                        android:padding="15dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:gravity="center"
+                            android:text="@string/txt_all_caught_up"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:gravity="center"
+                            android:text="@string/txt_take_a_break"
+                            android:textColor="@color/light_black"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
